@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="US">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS Selectors</title>
+        <link rel="stylesheet" href="CSSSelectorsDesign.css">
+    </head>
+    <body>
+        <h1>CSS Selectors Cheat Sheet</h1>
+        <p class="class-selector">Class Selector</p>
+        <hr>
+        <p id="id-selector">ID Selector</p>
+        <hr>
+        <h1 >Attribute Selectors</h1>
+        <p class="heading">Demo of [attribute]</p>
+        <a href="https://www.linkedin.com/in/saheeshna-kamuni-30a09b62/" target="_blank">My LinkedIn Profile</a>
+ 
+        <p class="heading">Demo of [attribute=value]</p>
+        <p lang="hello">Attribute Value Selector</p>
+
+        <p class="heading"> Demo of [attribute=~value]</p>
+        <p class="sahee-kamuni">Select and style all elements with a </p>
+        <p class="kamuni-sahee">title attribute that contains the word "sahee"</p>
+        <p>For more Attribute Selectors refer: <a href="https://www.w3schools.com/cssref/css_selectors.php" target="_blank">Here</a></p>
+        <hr>
+        <h1>Group Selector</h1>
+        <p>Selects all instances of elements A and B, e.g., h1, h2</p>
+        <p> selected lang=hello and class=sahee-kamuni</p>
+        <hr>
+        <h1>Descendant Selector</h1>
+        <p>Selects all B inside A, e.g., div p</p>
+        <p>Selected li under div</p>
+        <div id="first-list">
+            <ul>
+                <li>
+                    Succession
+                </li>
+                <li>
+                    How I Met your Mother
+                </li>
+                <li>
+                    Modern Family
+                </li>
+            </ul>
+        <hr>
+        </div>
+
+        <h1>Child Selector</h1>
+        <p>Selects all B elements directly within A, e.g., ul > li</p>
+        <p>Selected ul under div</p>
+        <div id="second-list">
+            <ul>
+                <li>
+                    Friends
+                </li>
+                <li>
+                    How I Met your Mother
+                </li>
+                <li>
+                    Modern Family
+                </li>
+            </ul>
+
+            <ul>
+                <li>
+                    Succession
+                </li>
+                <li>
+                    Breaking Bad
+                </li>
+                <li>
+                    House of Cards
+                </li>
+            </ul>
+        <hr>
+        </div>
+        <h1>Adjacent Sibling</h1>
+        <p>Selects B that is immediately after A, e.g., h1 + p</p>
+        <p>Here, it selects ul that comes after ul</p>
+        <div id="third-list">
+            <ul>
+                <li>
+                    A R Rahman
+                </li>
+                <li>
+                    Anirudh Ravichandran
+                </li>
+                <li>
+                    Thaman
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    Miley Cyrus
+                </li>
+                <li>
+                    The Weekend
+                </li>
+                <li>
+                    Katy Perry
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    Miley Cyrus
+                </li>
+                <li>
+                    The Weekend
+                </li>
+                <li>
+                    Katy Perry
+                </li>
+            </ul>
+            <h2> H2 is not selected in Adjacent Siblings. Above ul is selected and the one below is not</h2>
+            <ul>
+                <li>
+                    Miley Cyrus
+                </li>
+                <li>
+                    The Weekend
+                </li>
+                <li>
+                    Katy Perry
+                </li>
+            </ul>
+        <hr>
+        </div>
+        <h1>General Sibling</h1>
+        <p>Selects all B elements following A as siblings, e.g., h2 ~ p</p>
+        <p>The h2 ~ p selector doesn’t limit itself to just the first p after h2. Instead, it will select every p element that follows a h2 within the same parent. Here, all p elements after h2 (even those following h3 and h4) are affected because they are still considered siblings of h2.</p>
+        <div id="fourth-div">
+            <h2>This is H2</h2>
+            <p> H2 heading</p>
+            <h3>This is H3</h3>
+            <p>H3 heading</p>
+            <h4>This is H4</h4>
+            <p>H4 heading</p>
+        <hr>
+        </div>
+
+        <h1>CSS Pseudo-Classes Cheat Sheet</h1>
+
+    <!-- Link Pseudo-Classes -->
+    <section>
+        <h1>Link Pseudo-Classes</h1>
+        <a href="#" class="link">Unvisited Link (a:link)</a>
+        <a href="#" class="visited">Visited Link (a:visited)</a>
+    </section>
+    <hr>
+
+    <!-- User Action Pseudo-Classes -->
+    <section>
+        <h1>User Action Pseudo-Classes</h1>
+        <button class="hover-button">Hover over me (button:hover)</button>
+        <button class="focus-button">Click to focus (button:focus)</button>
+        <button class="active-button">Click to activate (button:active)</button>
+    </section>
+    <hr>
+    <!-- Structural Pseudo-Classes -->
+    <section>
+        <h1>Structural Pseudo-Classes</h1>
+        <ul>
+            <li>First Child (ul li:first-child)</li>
+            <li>Second Item</li>
+            <li>Last Child (ul li:last-child)</li>
+        </ul>
+    </section>
+    <hr>
+    <!-- Form Pseudo-Classes -->
+    <section>
+        <h1>Form Pseudo-Classes</h1>
+        <form>
+            <label for="required-input">Required Input (input:required): </label>
+            <input type="text" id="required-input" required>
+            <br><br>
+
+            <label for="optional-input">Optional Input (input:optional): </label>
+            <input type="text" id="optional-input">
+            <br><br>
+
+            <label for="checked-checkbox">Checkbox (input:checked): </label>
+            <input type="checkbox" id="checked-checkbox" checked>
+            <br><br>
+
+            <label for="disabled-input">Disabled Input (input:disabled): </label>
+            <input type="text" id="disabled-input" disabled>
+        </form>
+    </section>
+    <p>For more Pseudo Classes refer: <a href="https://www.w3schools.com/cssref/css_ref_pseudo_classes.php" target="_blank">Here</a></p>
+    <p>For more Pseudo Elements refer: <a href="https://www.w3schools.com/cssref/css_ref_pseudo_elements.php" target="_blank">Here</a></p>
+    
+    <hr>
+    </body>
+</html>

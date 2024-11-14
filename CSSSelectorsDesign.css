@@ -1,0 +1,130 @@
+h1{
+    text-align: center;
+}
+p{
+    font-size: 18px;
+}
+/*Class Selectors */
+.class-selector{
+    color: pink;
+    font-style: italic;
+}
+.heading{
+    text-decoration: underline;
+    font-style: italic;
+    font-size: 25px;
+}
+/*ID Selectors */
+#id-selector{
+    color: red;
+}
+
+/*Attribute Selectors */
+[target]{
+    border: 3px double blue;
+}
+
+[lang="hello"]{
+    color: blue;
+}
+
+[class~="sahee"]{
+    border: 2px solid black;
+}
+
+/*Group Selector*/
+[lang], .sahee-kamuni{
+    border: 1px dotted red;
+}
+
+/*Descendant Selector*/
+#first-list ul{
+    text-decoration: overline;
+}
+
+/*Child Selector*/
+#second-list > ul{
+    text-decoration: line-through;
+}
+
+/*Adjacent Sibling*/
+#third-list ul + ul{
+    border: 2px solid purple;
+}
+
+/* General Sibling*/
+#fourth-div h2~p{
+    color: blueviolet;
+}
+
+
+
+section {
+    margin-bottom: 30px;
+}
+
+/* Link Pseudo-Classes */
+a.link {
+    color: blue;
+    text-decoration: none;
+}
+
+a.link:hover {
+    color: darkblue;
+    text-decoration: underline;
+}
+
+a.visited {
+    color: purple;
+}
+
+/* User Action Pseudo-Classes */
+button {
+    padding: 10px;
+    margin-right: 10px;
+    border: 2px solid #6c63ff;
+    background-color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button.hover-button:hover {
+    background-color: #f0f8ff;
+}
+
+button.focus-button:focus {
+    outline: 3px solid orange;
+}
+
+button.active-button:active {
+    background-color: #dcdcdc;
+}
+
+/* Structural Pseudo-Classes */
+ul li:first-child {
+    font-weight: bold;
+    color: green;
+}
+
+ul li:last-child {
+    font-weight: bold;
+    color: red;
+}
+
+/* Form Pseudo-Classes */
+input:required {
+    border: 2px solid red;
+}
+
+input:optional {
+    border: 2px solid green;
+}
+
+input:checked {
+    outline: 2px solid blue;
+}
+
+input:disabled {
+    background-color: #f0f0f0;
+    color: #a0a0a0;
+}
